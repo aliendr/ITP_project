@@ -23,7 +23,7 @@ public class AllRequestsServlet extends HttpServlet {
         pageVariables.put("name", "Hello Kitty!");
 
         try {//new Try/Catch ....
-            response.getWriter().println(PageGenerator.instance().getPage("/site/index.html", pageVariables));
+            response.getWriter().println(PageGenerator.instance().getPage("resources/index.html", pageVariables));
         } catch (TemplateException e) {
             e.printStackTrace();
         }
